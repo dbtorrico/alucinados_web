@@ -10,6 +10,7 @@ include_once 'funcoes.php';
     Página de Cadastro
     <div id="menu5">
         <ul>
+            modifiquei
             <li><a href="index.php" title="Link 1">Home</a></li>
             <li><a href="cadastro.php" title="Link 2">Cadastro</a></li>
             <li><a href="#3" title="Link 3">Sobre a festa</a></li>
