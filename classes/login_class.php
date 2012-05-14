@@ -19,7 +19,7 @@ class login_class {
     public function __construct() {
         
         if($_REQUEST[email_login] AND $_REQUEST[senha_login]){
-            if($this->executarLogon($_REQUEST[email_login], $_REQUEST[senha_login])) echo "BEM VINDO";
+            if($this->executarLogon($_REQUEST[email_login], $_REQUEST[senha_login])) echo "<meta http-equiv='Refresh' content='0;URL=index_class.php' />";
             else echo "LOGIN FAIL";
         }
         $this->formularioLogon();
@@ -57,6 +57,7 @@ class login_class {
                 //dando os papeis ao usuario
                 if (in_array($login, array('admin')))
                     $_SESSION[role][] = 'administrador';
+                    echo 'administrador!';
 
                 //se nao tem papel entao retorna false
                 if (empty($_SESSION[role])) {
