@@ -3,6 +3,10 @@ To change this template, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
+<?php
+include_once 'bd.php';
+include_once 'funcoes.php';
+?>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="estilos.css" />
@@ -18,6 +22,7 @@ and open the template in the editor.
         <ul>
             <li><a href="index.php" title="Link 1">Home</a></li>
             <li><a href="cadastro.php" title="Link 2">Cadastro</a></li>
+            <li><a href="login.php" title="Link 3">Login</a></li>
             <li><a href="#3" title="Link 3">Sobre a festa</a></li>
             <li><a href="#4" title="Link 4">Fotos</a></li>
             <li><a href="#5" title="Link 5">Outros</a></li>	

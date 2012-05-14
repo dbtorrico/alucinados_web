@@ -1,5 +1,6 @@
 
 <?php
+include_once 'bd.php';
 include_once 'funcoes.php';
 ?>
 <html>
