@@ -1,0 +1,293 @@
+/* CSS da Unifal */
+
+/* body */
+body {
+    font: 12pt Arial,Verdana,Sans;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+/* link */
+a:link {
+    COLOR: #000066;
+    TEXT-DECORATION: none;
+    text-transform: none;
+    font-weight: bold;
+}
+a:visited {
+    COLOR: #000066;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    color: #000066;
+    text-decoration: none;
+    font-weight: bold;
+    background: #FFEDCC;
+}
+
+/* header */
+h1 {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    color: #000000;
+}
+h2 {
+    background-color: #b4c9d4;
+    border: solid #b4c9d4;
+    text-align: Center;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+h3 {
+    background-color: #b4c9d4;
+    border: solid #b4c9d4;
+    text-align: Center;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+h4 {
+    background-color: #b4c9d4;
+    border: solid #b4c9d4;
+    text-align: center;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+/* header estilo DRUPAL */
+#header {
+    height: 50px;
+    background: url(../imagens/bg-header.gif) repeat-x;
+    padding: 0;
+    margin: 0px 0px 0px 0px;
+}
+#header #site-name, #header #site-slogan {
+    position: relative;
+    padding: 0;
+    margin: 0px 0px 0px 0px;
+    left: 0px;
+    top: 3px;
+    padding-left: 10px;
+    border: 0;
+}
+#header #site-slogan {
+    top: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+#box-footer  {
+    float: left;
+    clear: both;
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+    border-top: 0;
+    text-align: center;
+    vertical-align: middle;
+    /*width : 748px; */
+}
+/*menu*/
+/*ul#menu { width: 100%; height: 43px; background: #FFF url("images/menu-bg.gif") top left repeat-x; font-size: 0.8em; font-family: "Lucida Grande", Verdana, sans-serif; font-weight: bold; list-style-type: none; margin: 0; padding: 0; }
+ul#menu li { display: block; float: left; margin: 0 0 0 5px; }
+ul#menu li a { height: 43px; color: #777; text-decoration: none; display: block; float: left; line-height: 200%; padding: 8px 15px 0; }
+ul#menu li a:hover { color: #333; }
+ul#menu li a.current{ color: #FFF; background: #FFF url("images/current-bg.gif") top left repeat-x; padding: 5px 15px 0; }*/
+
+/*- Menu 5--------------------------- */
+
+ul {
+    list-style-type: none;
+}
+#menu5 {
+    width: 200px;
+    margin: 10px;
+}
+/*#menu5 li {float: left;}*/
+
+#menu5 li a {
+/*    float: left;*/
+    height: 32px;
+    voice-family: "\"}\""; 
+    voice-family: inherit;
+    height: 24px;
+    text-decoration: none;
+
+}	
+
+#menu5 li a:link, #menu5 li a:visited {
+/*    float: left;*/
+    color: #FFF;
+    display: block;
+    background:  url("images/menu5.gif");
+    padding: 8px 0 0 10px;
+}
+
+#menu5 li a:hover {
+/*    float: left;*/
+    color: #FFF;
+    background:  url("images/menu5.gif") 0 -32px;
+    padding: 8px 0 0 10px;
+}
+
+
+/* combo box */
+select {
+    background-color: #efefef;
+    border: 1px #dcdcdc solid;
+    color: #000000;
+    font: 9pt Arial, Verdana, Sans;
+    /*width: 100%;*/
+}
+.width40px {
+    background-color: #efefef;
+    border: 1px #dcdcdc solid;
+    color: #000000;
+    font: 12pt Arial, Verdana, Sans;
+    width: 40px;
+}
+
+/* botao e campos dos forms */
+input, select, textarea {
+    background: beige;
+    border: 1px #dcdcdc solid;
+    color: #000000;
+    font: 12pt Sans;
+    text-align: left;
+}
+
+input.sizeall{
+    width: 100%;
+}
+
+.buttonclass {
+    background: #efefef;
+    border: 1px #dcdcdc solid;
+    color: #000066;
+    font: 12pt Sans;
+    text-align: center;
+}
+
+/* tabela */
+table {
+    border: #FFFFFF 1px solid;
+    border-collapse: collapse;
+    padding: 1px;
+    border-spacing: 1px;
+    font: 10pt Sans;
+}
+
+th {
+    border: #FFFFFF 2px solid;
+    padding: 1px;
+    background: #d4d4d4;
+    font: 9pt Arial,Verdana,Sans;
+    font-weight: bold;
+    text-align: center;
+}
+th.formulario {
+    text-align: right;
+}
+th.obrigatorio {
+    text-align: right;
+    text-decoration: underline;
+}
+
+
+td {
+    border: #FFFFFF 1px solid;
+    padding: 1px;
+}
+td.cb {
+    border: #FFFFFF 1px solid;
+    padding: 1px;
+    text-align: right;
+    font-weight: bold;
+}
+
+hr {
+    color: #EEEEEE;
+    border: 2px solid;
+    padding: 1px;
+    margin: 0px;
+    border-top-width: 1px;
+    height: 1px;
+}
+hr.pontilhado{
+    border: dotted;
+}
+
+/* (fieldset)*/
+fieldset {
+    border: 3px solid #eeeeee;
+    margin-bottom: 3px;
+}
+fieldset a {
+    text-align: left;
+    color: #000088;
+    font-size: small;
+    font-weight: bold;
+    text-decoration: none;
+}
+fieldset a:hover {
+    color: #000088;
+    background: #FFEDCC;
+}
+fieldset.menor {
+    font: 9pt Arial,Verdana,Sans;
+}
+
+/* mensagem */
+#mensagem {
+    border: 1px solid yellow;
+    background-color: #FFFFE8;
+    color: #808000;
+    font-family: serif;
+    font-size: small;
+    padding: 8px 8px 8px 40px;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+}
+#mensagem.erro {
+    border: 1px solid red;
+    color: #FF0000;
+    background-image: url(../imagens/icones/s_error.png)
+}
+#mensagem.sucesso {
+    border: 1px solid green;
+    color: #1a4f1a;
+    background-image: url(../imagens/icones/s_okay.png)
+}
+#mensagem.info {
+    border: 1px solid blue;
+    color: #1c277d;
+    background-image: url(../imagens/icones/s_info.png)
+}
+#mensagem.alerta {
+    border: 1px solid yellow;
+    color: #808000;
+    background-image: url(../imagens/icones/s_attention.png)
+}
+
+/* div */
+div.link{
+    padding: 3px;
+}
+
+/* (div) FIREFOX */
+div#firefox {
+    background: url('../imagens/firefox.jpg') no-repeat center;
+    margin: 0px 0px 0px 0px; /* distancia do topo */
+    padding: 10px 0px 10px 0px; /* altura da figura */
+    border: none solid black;
+    font-size: x-small;
+    text-align: center;
+    opacity: 0.25; /* 0.1 = CSS3 standard */
+}
+div#firefox a {
+    text-decoration: none;
+    color: black;
+}
+
