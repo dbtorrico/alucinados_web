@@ -13,6 +13,7 @@ a:link {
     TEXT-DECORATION: none;
     text-transform: none;
     font-weight: bold;
+    text-align: center;
 }
 a:visited {
     COLOR: #000066;
@@ -102,15 +103,14 @@ ul {
     list-style-type: none;
 }
 #menu5 {
-    width: 200px;
-    margin: 10px;
+    width: 800px;
+    margin: 0px;
 }
-/*#menu5 li {float: left;}*/
 
 #menu5 li a {
-/*    float: left;*/
-    height: 32px;
-    voice-family: "\"}\""; 
+    float: left;
+    height: 50px;
+    voice-family: "\"; 
     voice-family: inherit;
     height: 24px;
     text-decoration: none;
@@ -118,18 +118,18 @@ ul {
 }	
 
 #menu5 li a:link, #menu5 li a:visited {
-/*    float: left;*/
+    float: left;
     color: #FFF;
     display: block;
     background:  url("images/menu5.gif");
-    padding: 8px 0 0 10px;
+    padding: 8px 0 0 25px;
 }
 
 #menu5 li a:hover {
-/*    float: left;*/
+    float: left;
     color: #FFF;
     background:  url("images/menu5.gif") 0 -32px;
-    padding: 8px 0 0 10px;
+    padding: 8px 0 0 25px;
 }
 
 
@@ -272,22 +272,22 @@ fieldset.menor {
 }
 
 /* div */
-div.link{
+/*div.link{
     padding: 3px;
 }
 
-/* (div) FIREFOX */
+ (div) FIREFOX 
 div#firefox {
     background: url('../imagens/firefox.jpg') no-repeat center;
-    margin: 0px 0px 0px 0px; /* distancia do topo */
-    padding: 10px 0px 10px 0px; /* altura da figura */
+    margin: 0px 0px 0px 0px;  distancia do topo 
+    padding: 10px 0px 10px 0px;  altura da figura 
     border: none solid black;
     font-size: x-small;
     text-align: center;
-    opacity: 0.25; /* 0.1 = CSS3 standard */
+    opacity: 0.25;  0.1 = CSS3 standard 
 }
 div#firefox a {
     text-decoration: none;
     color: black;
-}
+}*/
 

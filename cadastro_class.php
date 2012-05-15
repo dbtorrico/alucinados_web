@@ -1,5 +1,10 @@
 <?php
 
+include_once 'bd.php';
+include_once 'funcoes.php';
+include_once 'index_class.php';
+include_once './classes/pessoa.php';
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -10,36 +15,27 @@
  *
  * @author danieltorrico
  */
-class cadastro_class {
+class cadastro_class extends index_class {
 
     //put your code here
     public function __construct() {
-        $this->paginaCadsatro($_REQUEST[acao]);
+        
+        $this->paginaCadastro();
         if ($_POST[executarAcao] == 'cadastrar') {
             $this->executarAcao($_POST[executarAcao]);
         }
     }
 
-    private function paginaCadsatro($acao) {
+    private function paginaCadastro() {
 
         echo '<head>
         <link rel="stylesheet" type="text/css" href="estilos.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    Página de Cadastro
-    <div id="menu5">
-        <ul>
-            modifiquei
-            <li><a href="index.php" title="Link 1">Home</a></li>
-            <li><a href="cadastro.php" title="Link 2">Cadastro</a></li>
-            <li><a href="#3" title="Link 3">Sobre a festa</a></li>
-            <li><a href="#4" title="Link 4">Fotos</a></li>
-            <li><a href="#5" title="Link 5">Outros</a></li>	
-        </ul>
-    </div>
-    <body>';
-        echo "  <form action='cadastro_class.php' onsubmit='return validarCampos()' method='POST'> ";
-        echo "<input type='hidden' name='executarAcao' value='$acao' /> ";
+    </head>';
+        //parent::menu();
+        echo'<body>';
+        echo "  <form action='cadastro.php' onsubmit='return validarCampos()' method='POST'> ";
+        echo "<input type='hidden' name='executarAcao' value='cadastrar' /> ";
         echo '   <fieldset> <legend>Novo Cadastro</legend>
                 <table>
                     <tr><td><br>Nome*: </td><td><input type="text" id="txtNome" name="txtNome"/></td></tr>
@@ -51,7 +47,7 @@ class cadastro_class {
                     <tr><td><br>Endereço: </td><td><input type="text" id="txtEnd" name="txtEnd" /></td><tr>
                 </table>
             </fieldset>
-            <input type="submit" value="Cadastrar" />
+            <input type="submit" value="cadastrar" />
             <input type="button" value="Voltar" onclick="voltar()" />
         </form>
 
@@ -60,16 +56,16 @@ class cadastro_class {
 
     private function executarAcao($acao) {
         $pessoa = new pessoa();
-        $pessoa->nome = $_POST[nome];
-        $pessoa->data_nasc = $_POST[data_nasc];
-        $pessoa->email = $_POST[email];
-        $pessoa->telefone = $_POST[telefone];
-        $pessoa->senha = $_POST[senha];
-        $pessoa->endereco = $_POST[endereco];
+        $pessoa->nome = $_POST[txtNome];
+        $pessoa->data_nasc = $_POST[txtDataNasc];
+        $pessoa->email = $_POST[txtEmail];
+        $pessoa->telefone = $_POST[txtTel];
+        $pessoa->senha = $_POST[txtSenha];
+        $pessoa->endereco = $_POST[txtEnd];
 
 
         switch ($acao) {
-            case 'inserir':
+            case 'cadastrar':
                 $pessoa->bdInserir();
                 break;
 //            case 'excluir':

@@ -14,40 +14,31 @@ class pessoa {
 
     
     public $bd;
+    public $id;
     public $nome;
-    public $email;
-    public $senha;
     public $data_nasc;
+    public $email;    
+    public $telefone;
+    public $senha;
     public $endereco;
     
     public function __construct() {
         $this->bd = new BD();
     }
-    
+    public function setId($id) {
+        $this->id = $id;
+    }
     
     public function bdInserir() {
         $sql = "INSERT INTO teste1.pessoa (nome, email, senha, data_nasc, telefone, endereco)
-        VALUES('$this->nome', '$this->email', '$this->senha', '$this->data_nasc', '$this->telefone', '$this->endereco') RETURNING id";
-        $this->bd->executarSQL($this->bd->substituiVazioPorNull($sql));
-        $obj = $this->bd->getObjeto();
-        if (!empty($obj->id)) {
-            $this->id = $obj->id; //atribuindo o id inserido ao objeto da classe TermoResponsabilidade
-            $executou = $this->bd->executarSQL($sql);
-            if (!$executou)
-                $_SESSION[erro][] = "ERRO - Problema ao atualizar status do termo de responsabilidade anterior.";
-            return $obj->id;
-        } else {
-            $_SESSION[erro][] = "ERRO - Problema ao inserir termo de responsabilidade.";
-            return false;
+        VALUES('$this->nome', '$this->email', '$this->senha', '$this->data_nasc', '$this->telefone', '$this->endereco')";
+        if($this->bd->executarSQL($this->bd->substituiVazioPorNull($sql))){
+            echo"<script>alert('Cadastro realizado com sucesso.')</script>";
+        }else{
+            echo"<script>alert('Erro ao cadastrar.')</script>";
         }
     }
-
-    /**
-     * Alteração na tabela patrimonio.termoresponsabilidade e gera log. 
-     * Se der algum problema faz uma sessão com erro.
-     * @return Verdadeiro para uma alteração sem erros e 
-     * falso para algum possível erro que venha acontecer na alteração.
-     */
+ 
     public function bdEditar() {
         $sql = "UPDATE patrimonio.termoresponsabilidade SET 
                     bemmovel_id = '$this->bemmovel_id', 
