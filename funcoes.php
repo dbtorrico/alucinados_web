@@ -24,6 +24,11 @@ include_once 'bd.php';
             window.alert("Campo Confirmar Senha não pode estar em branco");
             return false;
         }
+        if((document.getElementById('txtSenha').value)!=(document.getElementById('txtConfSenha').value)){
+            window.alert("Erro:\nConfirme novamente sua senha");
+            document.getElementById('txtConfSenha').value = '';
+            return false;
+        }
         else return true;
     }
     function voltar(){

@@ -12,33 +12,45 @@
  */
 class pessoa {
 
-    
     public $bd;
     public $id;
     public $nome;
     public $data_nasc;
-    public $email;    
+    public $email;
     public $telefone;
     public $senha;
     public $endereco;
-    
+
     public function __construct() {
         $this->bd = new BD();
     }
+
     public function setId($id) {
         $this->id = $id;
     }
-    
+
+    public function testaEmail($email) {
+        $sql = "SELECT email FROM teste1.pessoa WHERE email = '$email'";
+        $this->bd->executarSQL($this->bd->substituiVazioPorNull($sql));
+        if ($this->bd->getQuantidadeRegistros() > 0)
+            return FALSE;
+        return TRUE;
+    }
+
     public function bdInserir() {
         $sql = "INSERT INTO teste1.pessoa (nome, email, senha, data_nasc, telefone, endereco)
         VALUES('$this->nome', '$this->email', '$this->senha', '$this->data_nasc', '$this->telefone', '$this->endereco')";
-        if($this->bd->executarSQL($this->bd->substituiVazioPorNull($sql))){
-            echo"<script>alert('Cadastro realizado com sucesso.')</script>";
-        }else{
-            echo"<script>alert('Erro ao cadastrar.')</script>";
+        if ($this->testaEmail($this->email)) {
+            if ($this->bd->executarSQL($this->bd->substituiVazioPorNull($sql))) {
+                echo"<script>alert('Cadastro realizado com sucesso.')</script>";
+            } else {
+                echo"<script>alert('Erro ao cadastrar.')</script>";
+            }
+        } else {
+            echo"<script>alert('E-mail já cadastrado.')</script>";
         }
     }
- 
+
     public function bdEditar() {
         $sql = "UPDATE patrimonio.termoresponsabilidade SET 
                     bemmovel_id = '$this->bemmovel_id', 
